@@ -1,0 +1,48 @@
+#bg-nav {
+	background-color: #3C43A4;
+}
+#bg-nav a {
+    color: white;
+}
+
+
+.card-img-hover {
+    position: relative;
+}
+
+.card-view {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card-view a {
+    text-decoration: none;
+    padding: 3px;
+    color: red;
+    font-size: 20px;
+}
+
+
+
+#profile_icons li {
+    padding: 10px;
+    font-size: 25px;
+}
+
+#profile_icons li i {
+    font-size: inherit;
+    color: cadetblue;
+}
+
+#profile_icons li i:hover {
+    color: teal;
+}
+
+.w3view-cart:hover {
+	background: #be3646;
+}
+
+.microphone:hover {
+	background: #be3646;
+}

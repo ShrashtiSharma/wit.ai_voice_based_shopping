@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Electronic Store a Ecommerce Online Shopping Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Electronic Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!-- <script type="application/x-javascript">
+	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){ window.scrollTo(0,1); }
+</script> -->
+<!-- //for-mobile-apps -->
+<!-- Custom Theme files -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/fasthover.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/mycss.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+<script src="{% static 'js/myjs.js' %}"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b06605e970.js"></script>
+
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/jquery.countdown.css' %}" /> <!-- countdown --> 
+<!-- //js -->  
+<!-- web fonts --> 
+<link href='//fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- //web fonts -->  
+
+<!-- start-smooth-scrolling -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- //end-smooth-scrolling --> 
+
+<style>
+	.cam-show img, #myModal9 img, #myModal10 img, #myModal11 img, #myModal12 img {
+		height: 100% !important;
+	}
+
+	.mic-rel {
+		position: relative;
+	}
+
+	.pop-up-mic {
+		position: absolute;
+		top: 15px;
+		left: 5%;
+	}
+	
+	#audio_1 {
+		display: block;
+	}
+	#audio_tag{
+		display: none;
+	}
+	.cart {
+		position: relative;
+	}
+	#cart-close {
+		position: absolute;
+		top: 85px;
+		left: 100px;
+		z-index: 90000;
+		border: none;
+		display: none;
+	}
+    .mic_view {
+        position: absolute;
+        right: 10%;
+        top: 0%;
+    }
+
+</style>
+
+</head> 
+<body id="cart_id" class=>
+	<!-- for bootstrap working -->
+	<script type="text/javascript" src="{% static 'js/bootstrap-3.1.1.min.js' %}"></script>
+	<!-- //for bootstrap working -->
+
+	<!-- audio -->
+	<audio id="audio_tag" controls>
+		<source src="{% static 'audio/try_again.mp3' %}">
+	</audio>
+	<!-- // audio -->
+
+
+	<!-- header -->
+	<div class="header" id="home1" id="header_id">
+		<div class="container">
+			<div class="w3l_logo">
+				<h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light" id="bg-nav" id="nav_id">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto ml-auto">
+			<li class="nav-item ml-5 mr-5">
+			  <a class="nav-link" href="https://in.linkedin.com/in/gautamgupta1811">Gautam</a>
+			</li>
+			<li class="nav-item ml-5 mr-5">
+				<a class="nav-link" href="https://www.linkedin.com/in/prachi0112/">Prachi</a>
+			  </li>
+		  </ul>
+		</div>
+	</nav>
+	<!-- //navigation -->
+
+
+	<div class="mob-show new-products" id="mobiles_id">
+		<div class="container">
+			<h3>Mobiles</h3>
+			<div class="row">
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m1.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Oppo A9</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$300</span> <i class="item_price">$250</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Oppo A9"> 
+								<input type="hidden" name="amount" value="250.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+					  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6">
+                    <h4 class="mb-4">Oppo A9 2020 (with No CostEMI/Additional Exchange Offers)</h4>
+                    <strike>MRP: $300</strike>
+                    <p style="color: red; font-weight: 600; font-size: 22px;">MRP: $250</p>
+                    <p style="color: blue; font-size: 17px;">Free Delivery</p>
+                    <p style="color: red; font-size: 17px;">Fastest Delivery</p>
+                    <p class="mb-3" style="font-size: 18px;">1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase</p>
+                    <p style="font-size: 18px;">Box also includes: Type-C Cable, Headset, Sim Tray Ejecter, Pre-applied Screen Protector and Protective Case, Booklet with Warranty Card and Quick Guide</p>
+                    <p style="color: green; font-size: 18px;">In Stock</p>
+                    <p style="color: cornflowerblue; font-size: 18px;">7 Days Replacement</p>
+                    <p style="color: cornflowerblue; font-size: 18px;">1 Year Warranty</p>
+                </div>
+                <div class="col-1">
+                    <form action="#">
+                        <button class="microphone mic_view" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+                    </form>
+                    <form action="mic_con" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="cat" value="mobile">
+						<input type="hidden" name="item" value="OPPO A9"> 
+						<button class="microphone mic_view" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- footer -->
+	<div class="footer" id="footer-scroll" id="footer_id">
+		<div class="container">
+			<div class="w3_footer_grids">
+				<div class="col-md-3 w3_footer_grid mr-5">
+					<h3>Contact</h3>
+					<p>Bharati Vidyapeeth's College of Engineering.</p>
+					<ul class="address">
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>New Delhi, India.</li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid ml-5">
+					<h3>Category</h3>
+					<ul class="info"> 
+						<li><a href="products.html">Mobiles</a></li>
+						<li><a href="products1.html">Laptops</a></li>
+						<li><a href="products.html">Cameras</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3 id="profile_heading">Profile</h3>
+					<div class="row">
+						<div class="col">
+							<div>
+								<h6 class="ml-2" style="color: darkslateblue; font-weight: 500;">Gautam</h6>
+							</div>
+							<div>
+								<ul class="d-flex" id="profile_icons">
+									<li><a href="https://github.com/gautamgupta1811"><i class="fab fa-github"></i></a></li>
+									<li><a href="https://in.linkedin.com/in/gautamgupta1811"><i class="fab fa-linkedin"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col">
+							<div>
+								<h6 class="ml-2" style="color: darkslateblue; font-weight: 500;">Prachi</h6>
+							</div>
+							<div>
+								<ul class="d-flex" id="profile_icons">
+									<li><a href="https://github.com/prachi0112"><i class="fab fa-github"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/prachi0112/"><i class="fab fa-linkedin"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="footer-copy">
+			<div class="footer-copy1">
+				<div class="footer-copy-pos">
+					<a href="#home1" class="scroll"><img src="{% static 'images/arrow.png' %}" alt=" " class="img-responsive" /></a>
+				</div>
+			</div>
+			<div class="container">
+				<p>&copy; 2017 Electronic Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer --> 
+
+	<!-- cart-js -->
+	<script src="{% static 'js/minicart.js' %}"></script>
+	<script>
+        w3ls.render();
+
+        w3ls.cart.on('w3sb_checkout', function (evt) {
+        	var items, len, i;
+
+        	if (this.subtotal() > 0) {
+        		items = this.items();
+
+        		for (i = 0, len = items.length; i < len; i++) { 
+        		}
+        	}
+        });
+    </script>
+	<!-- //cart-js -->   
+
+</body>
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script>
+	const data = JSON.parse("{{data|escapejs}}");
+	var datanode = document.getElementById("audio_tag");
+	if(data != null){ 
+		datanode.play();
+		data = null;
+	}
+
+	
+</script>
