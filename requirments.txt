@@ -1,5 +1,5 @@
-django==2.0
-gtts==2.1.1
+Django==2.0
+gTTs==2.1.1
 playsound==1.2.2
 wit==6.0.0
 gunicorn==20.0.4

@@ -1,1 +1,1 @@
-web: gunicorn wit_ai_shop.wsgi
+web: gunicorn wit.ai_voice_based_shopping wit_ai_shop wit_ai_shop.wsgi --log-file -
