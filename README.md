@@ -3,6 +3,9 @@ Online Shopping using Voice Assistant
 
 Why dig the online store for the right product with right features, when your voice is enough to ask for it?
 
+## Check it out here :-
+https://voice-assisted-online-shopping.herokuapp.com/
+
 
 ## Instructions to try :-
 Step 1: Clone the GitHub Repository.   
