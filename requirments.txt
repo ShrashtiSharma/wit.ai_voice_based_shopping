@@ -1,4 +1,4 @@
-Django==2.0
+Django==4.0
 gTTs==2.1.1
 playsound==1.2.2
 wit==6.0.0

@@ -512,7 +512,7 @@ li.w3pages .dropdown-menu > li > a:hover{
 /*-- //navigation --*/
 /*-- banner --*/
 .banner{
-	background:url(../images/b1.jpg) no-repeat center 0px; 
+	background:url(../images/login-background.jpeg) no-repeat center 0px; 
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -534,7 +534,7 @@ li.w3pages .dropdown-menu > li > a:hover{
 	text-align: left;
 }
 .banner.banner1{
-	background:url(../images/bg1.jpg) no-repeat center;
+	background:url(../images/login-background.jpeg) no-repeat center;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
