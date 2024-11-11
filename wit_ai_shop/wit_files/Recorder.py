@@ -1,61 +1,62 @@
 import pyaudio
 import wave
 
-
 def record_audio(RECORD_SECONDS, WAVE_OUTPUT_FILENAME):
-    #--------- SETTING PARAMS FOR OUR AUDIO FILE ------------#
-    FORMAT = pyaudio.paInt16    # format of wave
-    CHANNELS = 2                # no. of audio channels
-    RATE = 44100                # frame rate
-    CHUNK = 1024                # frames per audio sample
-    #--------------------------------------------------------#
-     
-    # creating PyAudio object
-    audio = pyaudio.PyAudio()
-     
-    # open a new stream for microphone
-    # It creates a PortAudio Stream Wrapper class object
-    stream = audio.open(format=FORMAT,channels=CHANNELS,
-                        rate=RATE, input=True,
-                        frames_per_buffer=CHUNK)
+    # Setting parameters for the audio file
+    FORMAT = pyaudio.paInt16    # Format of wave
+    CHANNELS = 1                # Number of audio channels (use 1 for mono)
+    RATE = 16000                # Frame rate (16000 Hz is common for speech recognition)
+    CHUNK = 1024                # Frames per audio sample
+    
+    try:
+        # Creating PyAudio object
+        audio = pyaudio.PyAudio()
+        print("PyAudio object created")
 
+        # Open a new stream for the microphone
+        print("Listening...")
+        stream = audio.open(format=FORMAT, channels=CHANNELS,
+                            rate=RATE, input=True,
+                            frames_per_buffer=CHUNK)
 
-    #----------------- start of recording -------------------#
-    print("Listening...")
+        # List to save all audio frames
+        frames = []
 
-    # list to save all audio frames
-    frames = []
+        # Start recording
+        for _ in range(int(RATE / CHUNK * RECORD_SECONDS)):
+            data = stream.read(CHUNK)
+            frames.append(data)
 
-    for i in range(int(RATE / CHUNK * RECORD_SECONDS)):
-        # read audio stream from microphone
-        data = stream.read(CHUNK)
-        # append audio data to frames list
-        frames.append(data)
+        # Finished recording
+        print("Finished recording.")
 
-    #------------------ end of recording --------------------#   
-    print("Finished recording.")
-      
-    stream.stop_stream()    # stop the stream object
-    stream.close()          # close the stream object
-    audio.terminate()       # terminate PortAudio
+        # Stop and close the stream
+        stream.stop_stream()
+        stream.close()
+        audio.terminate()
 
-    #------------------ saving audio ------------------------#
+        # Saving the recorded audio as a .wav file
+        waveFile = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+        waveFile.setnchannels(CHANNELS)
+        waveFile.setsampwidth(audio.get_sample_size(FORMAT))
+        waveFile.setframerate(RATE)
+        waveFile.writeframes(b''.join(frames))
+        waveFile.close()
+        print(f"Audio saved as {WAVE_OUTPUT_FILENAME}")
 
-    # create wave file object
-    waveFile = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-
-    # settings for wave file object
-    waveFile.setnchannels(CHANNELS)
-    waveFile.setsampwidth(audio.get_sample_size(FORMAT))
-    waveFile.setframerate(RATE)
-    waveFile.writeframes(b''.join(frames))
-
-    # closing the wave file object
-    waveFile.close()
-
+    except Exception as e:
+        print(f"Error in record_audio function: {e}")
 
 def read_audio(WAVE_FILENAME):
-    # function to read audio(wav) file
-    with open(WAVE_FILENAME, 'rb') as f:
-        audio = f.read()
-    return audio
+    try:
+        # Function to read audio (wav) file
+        with open(WAVE_FILENAME, 'rb') as f:
+            audio = f.read()
+        return audio
+    except Exception as e:
+        print(f"Error in read_audio function: {e}")
+        return None
+
+if __name__ == "__main__":
+    print("Starting audio recording...")
+    record_audio(4, "myspeech.wav")  # Example: 4 seconds recording
