@@ -8,11 +8,11 @@ from gtts import gTTS
 import playsound
 from django.db import connection
 
-# Create your views here.
-
+# Home view
 def home(request):
     return render(request, 'index.html')
 
+# Mic view (handles speech recognition)
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
     id_list = ['new_products_id', 'laptops_id', 'mobiles_id', 'header_id', 'cameras_id', 'special_deal_id']
@@ -37,6 +37,7 @@ def mic(request):
         data = json.dumps({1: 2})
         return render(request, 'index.html', {'data': data})
 
+# Mic control view (handles speech recognition and database query)
 def mic_con(request):
     cat = request.POST.get('cat')
     item = request.POST.get('item')
@@ -61,11 +62,17 @@ def mic_con(request):
             playsound.playsound("wit_response.mp3")
             return render(request, 'view.html')
         else:
+            print(f"SQL query did not return any results for: {item}, column: {column}")
             return render(request, 'view.html', {'data': json.dumps({"error": "No data found"})})
         
     except Exception as e:
         print(f"Error in mic_con view: {e}")
         return render(request, 'view.html', {'data': json.dumps({"error": "An error occurred"})})
 
+# Product view (used for rendering the products page)
+def products_view(request):
+    return render(request, 'view.html')
+
+# Product details page (just a placeholder here)
 def product(request):
     return render(request, 'view.html')
