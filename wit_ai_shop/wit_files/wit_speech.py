@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-from .Recorder import record_audio, read_audio
+from Recorder import record_audio, read_audio
 
 
 # Wit speech API endpoint
