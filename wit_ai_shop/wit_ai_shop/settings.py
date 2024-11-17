@@ -129,3 +129,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+# Wit.ai API Configuration
+WIT_AI_ACCESS_TOKEN = os.getenv('WIT_AI_ACCESS_TOKEN', '7KZ7AJ3PVZZ342N2IIUG6ZQDIX6DOG7M')
